@@ -17,20 +17,29 @@ body{
 .body{
     height: 240px;
     width: 240px;
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 50%;
     position: absolute;
     margin: auto;
     left: 0;
     right: 0;
     top: 100px;
+    animation-name: example;
+    animation-duration: 0.7s;
+    animation-delay: 0.5s;
+}
+@keyframes example{
+    100%   {
+        top:15px; 
+        content: "";
+    }
 }
 .body::before{
     content: "";
     position: absolute;
     height: 75.5px;
     width: 75.5px;
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 50%;
     left: 80px;
     top: -25px;
@@ -54,7 +63,7 @@ body{
     margin: auto;
     left: 0;
     right: 0;
-    top: 70px;
+    top: 68px;
     border-radius: 30px;
 }
 .ears{
@@ -65,6 +74,10 @@ body{
     border-radius: 45px 0;
     top: 0;
     left: -40px;
+    animation-name: ears;
+    animation-duration: 0.7s;
+    animation-delay: 0.4s;
+    /* animation-iteration-count: 1; */
 }
 .ears:before{
     position: absolute;
@@ -76,15 +89,23 @@ body{
     top: 0;
     left: 110px;
 }
+@keyframes ears{
+    100%   {top:-15px; left: -38px; }
+}
 .eyes{
     position: absolute;
     background-color: #252525;
     height: 10px;
     width: 10px;
-    left: 10px;
-    top: 5px;
+    left: 15px;
+    top: 9px;
     border-radius: 50%;
-    box-shadow: 0 0 0 15px #fff, 0 0 0 20px #505050
+    box-shadow: 0 0 0 10px #fff, 0px 0px 0 15px #505050;
+    animation-name: eyes1;
+    animation-duration: 1s;
+    /* animation-delay: 2s; */
+    /* animation-duration: 0.7s; */
+    /* animation-iteration-count: 2; */
 }
 .eyes::before{
     position: absolute;
@@ -95,8 +116,41 @@ body{
     left: 47px;
     top: 0px;
     border-radius: 50%;
-    box-shadow: 0 0 0 15px #fff, 0 0 0 20px #505050
+    /* box-shadow: 5px 0 0 5px #fff, 0 0 0 10px #505050; */
+    /* box-shadow: 0 0 0 10px #fff, 15px 10px 0 0px #505050; */
+    box-shadow: 0 0 0 10px #fff, 0px 0px 0 15px #505050;
+    /* box-shadow: 0 0 0 15px #fff, 0 0 0 20px #505050; */
+    animation-name: eyes2;
+    animation-duration: 1s;
+    /* animation-delay: 2s; */
+
 }
+ @keyframes eyes1{
+    100%   {
+        position: absolute;
+        background-color: #252525;
+        height: 10px;
+        width: 10px;
+        left: 10px;
+        top: -10px;
+        border-radius: 50%;
+        border-top: 80px;
+    box-shadow: 5px 0 0 5px #fff, 0 0 0 10px #505050;
+      } 
+     } 
+@keyframes eyes2{
+    100%   {
+        position: absolute;
+        content: "";
+        background-color: #252525;
+        height: 10px;
+        width: 10px;
+        left: 47px;
+        top: 0px;
+        border-radius: 50%;
+        box-shadow: 5px 0 0 5px #fff, 0 0 0 10px #505050;
+     }
+} 
 .nose{
     position: absolute;
     background-color: #404040;
@@ -106,6 +160,9 @@ body{
     top: 60px;
     border-radius: 3px 3px 0 0;
     border-bottom: 3.5px solid #252525;
+    animation-name: nose;
+    animation-duration: 0.7s;
+    animation-delay: 0.5s;
 }
 .nose:before{
     content: "";
@@ -116,6 +173,18 @@ body{
     left: 6.5px;
     top: 10px;
 }
+@keyframes nose{
+    100%   {
+        position: absolute;
+        background-color: rgba(255, 0, 0, 0.39);
+        height: 25px;
+        width: 16px;
+        left: 32px;
+        top: 60px;
+        border-radius: 50%;
+        border: 3.5px solid rgb(255, 153, 0);
+     }
+}
 .legs{
     position: absolute;
     background-color: #505050;
@@ -124,7 +193,13 @@ body{
     left: 180px;
     top: 310px;
     box-shadow: 110px 0 #505050;
+    animation-name: legs;
+    animation-duration: 0.7s;
+    animation-delay: 0.5s;
     /* z-index: 0; */
+}
+@keyframes legs{
+    100%   {top: 200px; }
 }
 .shadow{
     width: 250px;
@@ -136,4 +211,17 @@ body{
     left: 0;
     right: 0;
     border-radius: 5px;
+}
+
+.mouse img{
+    width: 15%;
+    margin: auto;
+    margin-top: 350px;
+    margin-left: 850px;
+    animation-name: mouse;
+    animation-duration: 3.8s;
+    /* transform: translate(150px, -7vh); */
+}
+@keyframes mouse{
+    100%   {margin-left: -500px;}
 }
